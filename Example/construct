@@ -1,0 +1,16 @@
+#valgrind --leak-check=full --log-file=Valgrind.%p --show-reachable=yes    
+gdb --args HydroConstruct -f flowout.cdf -t tempout.cdf -s saltout.cdf -r params_17July2012.prm 
+#1>ou1.txt 2>out2.txt
+mv saltout.cdf Done
+mv tempout.cdf Done
+mv flowout.cdf Done/flowout1.cdf
+mv volume1.cdf Done/volume1.cdf
+
+cd Done
+ncgen -o SEAP132_temp.nc tempout.cdf
+ncgen -o SEAP132_salt.nc saltout.cdf
+ncgen -o SEAP132_hydro.nc flowout1.cdf
+
+
+cd ..
+
