@@ -1,0 +1,7 @@
+./configure \
+CC='gcc-mp-4.6' \
+CFLAGS='-I/usr/local/x64/include -I/usr/local/include/Atlantis-2.0/Atlantis' \
+CXXFLAGS='-I/usr/local/x64/include -I/usr/local/include/Atlantis-2.0/Atlantis' \
+CPPFLAGS='-I/usr/local/x64/include -I/usr/local/include/Atlantis-2.0/Atlantis' \
+LDFLAGS='-L/usr/local/lib -L/usr/local/x64/lib -lcurl'
+
